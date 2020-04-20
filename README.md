@@ -24,7 +24,7 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+<!-- - [Deployment](#deployment) -->
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
@@ -88,9 +88,9 @@ Start the project with :
 npm run dev
 ```
 
-## 🚀 Deployment <a name = "deployment"></a>
+<!-- ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+Add additional notes about how to deploy this on a live system. -->
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
