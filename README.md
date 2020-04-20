@@ -3,7 +3,7 @@
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">learn1</h3>
+<h3 align="center">Learn ME<sub>( R || A )</sub>N</h3>
 
 <div align="center">
 
@@ -34,38 +34,26 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Learn basic setup of NodeJS, Express and MongoDB.
+Learn basic setup of NodeJS, Express and MongoDB in simple steps.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+Take a pull of this repo. These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
+ > Node and NPM are required. 
+ > MongoDB Community Edition for the database erver.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
+Install all node modules in package.json
 
 ```
-Give the example
+npm install
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
+<!-- 
 ## 🔧 Running the tests <a name = "tests"></a>
 
 Explain how to run the automated tests for this system.
@@ -84,11 +72,21 @@ Explain what these tests test and why
 
 ```
 Give an example
-```
+``` -->
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+We need initialise and run the MongoDB Server : 
+
+```
+mongod --dbpath "PATH_TO_FOLDER_WHERE_MONGODB_SHOULD_INITIATE"
+```
+
+Start the project with : 
+
+```
+npm run dev
+```
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
@@ -98,7 +96,6 @@ Add additional notes about how to deploy this on a live system.
 
 - [MongoDB](https://www.mongodb.com/) - Database
 - [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
 ## ✍️ Authors <a name = "authors"></a>
