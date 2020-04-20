@@ -23,8 +23,7 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
-<!-- - [Deployment](#deployment) -->
+- [Getting Started](#getting_started)<!-- - [Deployment](#deployment) -->
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
