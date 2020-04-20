@@ -51,6 +51,19 @@ Install all node modules in package.json
 ```
 npm install
 ```
+### Folder Structure
+    .
+    ├── ...
+    ├── app                   # Routes and DB Model configurations to be imported to server.js
+    │   ├── routes                # Express Route Definitions
+    │   └── models                # MongoDB/Mongoose DB Model Definitions
+    ├── config                # Static Configurations to be user by the app
+    │   └── db.js                # MongoDB Configurations including connection url, port etc.
+    ├── db                    # Directory to initiate the MongoDB server (INITATE MANUALLY)
+    ├── package.json          # Node Package dependencies and Scripts
+    ├── server.js             # Main Entry point to start the application
+    ├── README.md             # Getting started guide
+    └── ...
 
 <!-- 
 ## 🔧 Running the tests <a name = "tests"></a>
