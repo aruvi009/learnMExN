@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
     extended: true 
 }));
 
-MongoClient.connect(config.url, (err, database) => {
+MongoClient.connect(config.url, {useUnifiedTopology: true}, (err, database) => {
     if (err)
         return console.log(err)
 

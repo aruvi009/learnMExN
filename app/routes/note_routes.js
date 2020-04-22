@@ -14,7 +14,7 @@ module.exports = function(app, db) {
             if (err)
                 res.send({'error' : 'Post action failed'});
             
-            res.send(result.ops[0]);
+            return res.send(result.ops[0]);
         })
     })
 
@@ -29,9 +29,44 @@ module.exports = function(app, db) {
             if (err)
                 res.send({'error' : 'Get action failed'});
             
-            res.send(item);
+            return res.send(item);
         })
     })
 
+    app.put('/notes/:id', (req, res) => {    
+        const id = req.params.id;    
+        const details = { 
+            '_id': new ObjectID(id) 
+        };    
+        const note = { 
+            text: req.body.body, 
+            title: req.body.title, 
+            age: req.body.age 
+        };    
+        
+        db.collection('notes').update(details, note, (err, result) => {      
+            if (err) {          
+                res.send({'error':'An error has occurred'});      
+            }
+                     
+            return res.send(note);       
+        });  
+    });
+
+    app.delete('/notes/:id', (req, res) => {    
+        const id = req.params.id;    
+        const details = { 
+            '_id': new ObjectID(id) 
+        };   
+        
+        db.collection('notes').remove(details, (err, item) => {      
+            if (err) {        
+                res.send({'error':'An error has occurred'});      
+            } 
+            else {        
+                res.send('Note ' + id + ' deleted!');      
+            }     
+        });  
+    });
 
 }
