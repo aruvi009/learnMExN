@@ -1,4 +1,13 @@
 
+/**
+ * Note Route definitions
+ * 
+ * INFO : 
+ * We are using the express object to get the request methods and assign a callback
+ * We are using the mongodb connection object to query the database and use database functions
+ * 
+ */
+
 var ObjectID = require('mongodb').ObjectID;
 
 module.exports = function(app, db) {
@@ -12,7 +21,7 @@ module.exports = function(app, db) {
 
         db.collection('notes').insertOne(note, (err, result) => {
             if (err)
-                res.send({'error' : 'Post action failed'});
+                return res.send({'error' : 'Post action failed'});
             
             return res.send(result.ops[0]);
         })
@@ -27,7 +36,7 @@ module.exports = function(app, db) {
 
         db.collection('notes').findOne(details, (err, item) => {
             if (err)
-                res.send({'error' : 'Get action failed'});
+                return res.send({'error' : 'Get action failed'});
             
             return res.send(item);
         })
@@ -46,7 +55,7 @@ module.exports = function(app, db) {
         
         db.collection('notes').update(details, note, (err, result) => {      
             if (err) {          
-                res.send({'error':'An error has occurred'});      
+                return res.send({'error':'An error has occurred'});      
             }
                      
             return res.send(note);       
@@ -61,11 +70,10 @@ module.exports = function(app, db) {
         
         db.collection('notes').remove(details, (err, item) => {      
             if (err) {        
-                res.send({'error':'An error has occurred'});      
-            } 
-            else {        
-                res.send('Note ' + id + ' deleted!');      
-            }     
+                return res.send({'error':'An error has occurred'});      
+            }
+            
+            return res.send('Note ' + id + ' deleted!');
         });  
     });
 
