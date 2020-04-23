@@ -106,7 +106,7 @@ Add additional notes about how to deploy this on a live system. -->
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
+- [MongoDB](https://www.mongodb.com/) with [Mongoose](https://mongoosejs.com/) - Database + ORM
 - [Express](https://expressjs.com/) - Server Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
